@@ -1,13 +1,12 @@
 package Equipo7.CalculadoraDivisas;
 
-/**
- * Hello world!
- *
- */
+import Equipo7.Interfaz.InterfazGrafica;
+
 public class App 
 {
     public static void main( String[] args )
     {
-        System.out.println( "Hello World!" );
+		// Llamamos a la aplicacion grafica
+		InterfazGrafica window = new InterfazGrafica();
     }
 }
