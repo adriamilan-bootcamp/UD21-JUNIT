@@ -22,7 +22,7 @@ public class GeometriaTest {
 	}
 	
 	@Test
-	void areaPentago() {
+	void areaPentagono() {
 		int result = geometria.areapentagono(5, 2);
 		int expect = 5;
 		assertEquals(expect, result);
@@ -87,5 +87,28 @@ public class GeometriaTest {
 		int expect = 0;
 		assertEquals(expect, geometria.getArea());
 	}
+
+	@Test
+	void areaCirculo() {
+		double result = geometria.areaCirculo(4);
+		double expect = 50.27;
+		int delta = 1;
+		assertEquals(expect, result, delta);
+	}
+	
+	@Test
+	void  areatriangulo() {
+		int result = geometria.areatriangulo(2, 3);
+		int expect = 3; 
+		assertEquals(expect, result);		
+	}
+	
+	@Test
+	void  arearectangulo() {
+		int result = geometria.arearectangulo(4, 4);
+		int expect = 16;
+		assertEquals(expect, result);		
+	}
+	
 	
 }
