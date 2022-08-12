@@ -24,7 +24,7 @@ public class Methods {
 		if (indicator.equals("moneda1")) {
 			return moneda1Value + typeMonedaSelector(moneda1TypeSelected);
 		} else if(indicator.equals("moneda2")) {
-			return monedaTransform(moneda1Value, moneda2Value, moneda1TypeSelected, moneda2TypeSelected, typeMonedaSelector(moneda2TypeSelected));
+			return monedaTransform(moneda1Value, moneda1TypeSelected, moneda2TypeSelected, typeMonedaSelector(moneda2TypeSelected));
 		} else {
 			return "Error";
 		}
@@ -34,11 +34,35 @@ public class Methods {
 	public String monedaTransform(int moneda1, String moneda1Type,String moneda2Type, String coinIcon) {
 		// Devuelve valor de moneda2
 		
-		String moneda1Type = moneda1TypeSelected.toLowerCase();
-		String moneda2Type = moneda2TypeSelected.toLowerCase();
+		String type1 = moneda1Type.toLowerCase();
+		String type2 = moneda2Type.toLowerCase();
 		
-		if (moneda1Type.equals("euro") && moneda2Type.equals("dolars")) {
-			return euro2Dolars(moneda1);
+		if (type1.equals("euro") && type2.equals("dolars")) {
+			return moneda1 * 1.03 + coinIcon;
+		} else if(type1.equals("euro") && type2.equals("yen")) {
+			return moneda1 * 136.91 + coinIcon;
+		} else if(type1.equals("euro") && type2.equals("libra")) {
+			return moneda1 * 0.85 + coinIcon;
+		} else if(type1.equals("dollar") && type2.equals("euro")) {
+			return moneda1 * 0.98 + coinIcon;
+		} else if(type1.equals("dollar") && type2.equals("yen")) {
+			return moneda1 * 133.55 + coinIcon;
+		} else if(type1.equals("dollar") && type2.equals("libra")) {
+			return moneda1 * 0.82 + coinIcon;
+		} else if(type1.equals("yen") && type2.equals("euro")) {
+			return moneda1 * 0.0073 + coinIcon;
+		} else if(type1.equals("yen") && type2.equals("dollar")) {
+			return moneda1 * 0.0075 + coinIcon;
+		} else if(type1.equals("yen") && type2.equals("libra")) {
+			return moneda1 * 0.0062 + coinIcon;
+		} else if(type1.equals("libra") && type2.equals("euro")) {
+			return moneda1 * 1.18 + coinIcon;
+		} else if(type1.equals("libra") && type2.equals("dollar")) {
+			return moneda1 * 1.21 + coinIcon;
+		} else if(type1.equals("libra") && type2.equals("yen")) {
+			return moneda1 * 162.03 + coinIcon;
+		} else {
+			return "0?error";
 		}
 		
 	}
