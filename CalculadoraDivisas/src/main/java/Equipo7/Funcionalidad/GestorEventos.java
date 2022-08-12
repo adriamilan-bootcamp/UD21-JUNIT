@@ -50,14 +50,17 @@ public class GestorEventos implements ActionListener {
 	}
 	
 	public void moneda1() {
-		
+
 		this.interfazGrafica.textField_dol_converter.setText(this.metodos.valorMoneda("moneda1", this.interfazGrafica.valorMoneda1, this.interfazGrafica.comboBox_1.getSelectedItem().toString(), this.interfazGrafica.comboBox_2.getSelectedItem().toString()));
+
 		
 	}
 
 	public void moneda2() {
 		
+
 		this.interfazGrafica.textField_eur_converter.setText(this.metodos.valorMoneda("moneda1", this.interfazGrafica.valorMoneda1, this.interfazGrafica.comboBox_1.getSelectedItem().toString(), this.interfazGrafica.comboBox_2.getSelectedItem().toString()));
+
 		
 	}
 	
