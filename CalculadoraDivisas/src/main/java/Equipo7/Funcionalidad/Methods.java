@@ -10,27 +10,37 @@ public class Methods {
 		
 		Hashtable<String, String> coinsValue = new Hashtable<String, String>();
 		coinsValue.put("euro", "€");
-		coinsValue.put("dolar", "$");
-		coinsValue.put("yen", "¥");
-		coinsValue.put("libra", "£");
+		coinsValue.put("dolar", "€");
+		coinsValue.put("yen", "€");
+		coinsValue.put("libra", "€");
 		
 		return coinsValue.get(monedaSeleccionada);
 		
 	}
 	
-	public String valorMoneda(String indicator, int monedaValue, String monedaTypeSelected) {
+	public String valorMoneda(String indicator, int moneda1Value, int moneda2Value, String moneda1TypeSelected, String moneda2TypeSelected) {
 		// Devuelve el valor de moneda$ + typeMoneda
 		
 		if (indicator.equals("moneda1")) {
-			return monedaValue + typeMonedaSelector(monedaTypeSelected);
+			return moneda1Value + typeMonedaSelector(moneda1TypeSelected);
 		} else if(indicator.equals("moneda2")) {
-			return monedaTransform(monedaValue) + typeMonedaSelector(monedaTypeSelected);
+			return monedaTransform(moneda1Value, moneda2Value, moneda1TypeSelected, moneda2TypeSelected, typeMonedaSelector(moneda2TypeSelected));
+		} else {
+			return "Error";
 		}
 		
 	}
 	
-	public int monedaTransform() {
+	public String monedaTransform(int moneda1, int moneda2, String moneda1Type,String moneda2Type, String coinIcon) {
 		// Devuelve valor de moneda2
+		
+		String moneda1Type = moneda1TypeSelected.toLowerCase();
+		String moneda2Type = moneda2TypeSelected.toLowerCase();
+		
+		if (moneda1Type.equals("euro") && moneda2Type.equals("dolars")) {
+			return euro2Dolars(moneda1, moneda2);
+		}
+		
 	}
 	
 }

@@ -12,10 +12,9 @@ public class GestorEventos implements ActionListener {
 	
 	private Methods metodos;
 	
-	public GestorEventos(Methods metodos,InterfazGrafica ig) {
-		this.metodos = metodos;
+	public GestorEventos(InterfazGrafica ig) {
+		
 		this.interfazGrafica = ig;
-		ig.comboBox.addActionListener(this);
 		
 	}
 	
@@ -35,17 +34,13 @@ public class GestorEventos implements ActionListener {
 	
 	public void moneda1() {
 		
-		String monedaSeleccionada = this.interfazGrafica.comboBox.getSelectedItem().toString();
-		
-		this.interfazGrafica.moneda1.setText(this.metodos.typeMonedaSelector(monedaSeleccionada.toLowerCase()));
+		this.interfazGrafica.moneda1.setText(this.metodos.valorMoneda("moneda1", this.interfazGrafica.valorMoneda1, this.interfazGrafica.valorMoneda2, this.interfazGrafica.coinSelector1.getSelectedItem().toString(), this.interfazGrafica.coinSelector2.getSelectedItem().toString()));
 		
 	}
 
 	public void moneda2() {
 		
-		String monedaSeleccionada = this.interfazGrafica.comboBox.getSelectedItem().toString();
-		
-		this.interfazGrafica.moneda2.setText(this.metodos.typeMonedaSelector(monedaSeleccionada.toLowerCase()));
+		this.interfazGrafica.moneda2.setText(this.metodos.valorMoneda("moneda1", this.interfazGrafica.valorMoneda1, this.interfazGrafica.valorMoneda2, this.interfazGrafica.coinSelector1.getSelectedItem().toString(), this.interfazGrafica.coinSelector2.getSelectedItem().toString()));
 		
 	}
 	
