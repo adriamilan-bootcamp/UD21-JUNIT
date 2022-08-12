@@ -15,7 +15,7 @@ public class GestorEventos implements ActionListener {
 	private Methods metodos;
 	
 	private double moneda1;
-	
+	//INSIDE THE CONSTRUCTOR INSTANCE THE INTERFACE AND ADDS ALL LISTENER FOR ALL ELEMENTS
 	public GestorEventos(InterfazGrafica ig,Methods metodos) {
 		this.metodos = metodos;
 		this.interfazGrafica = ig;
@@ -39,7 +39,7 @@ public class GestorEventos implements ActionListener {
 	
 	@Override
 	public void actionPerformed(ActionEvent event) {
-		
+		//SWITCHES THE COMMANDS FOR THE MAIN BUTTON ELEMENTS
 		switch (event.getActionCommand()) {
 			case "moneda":
 				moneda1();
@@ -50,7 +50,7 @@ public class GestorEventos implements ActionListener {
 				moneda1();
 				break;
 		}
-		
+		//USES THE SOURCE ELEMENT IDENTIFIER TO EVALUATE EQUALITY OF VALUES
 		if (event.getSource() == this.interfazGrafica.btnNewButton_CE) {
 			settear();
 		}else if (event.getSource() == this.interfazGrafica.btnNewButton_delete) {
@@ -59,22 +59,22 @@ public class GestorEventos implements ActionListener {
 		}
 		
 	}
-	
+	//SETTER
 	public void settearTexto(String numero) {
 		String texto = this.interfazGrafica.textField_dol_converter.getText();
 		this.interfazGrafica.textField_dol_converter.setText(texto + numero);
 	}
-	
+	//DELETE FUNCTION
 	public void delete() {
 		String texto = this.interfazGrafica.textField_dol_converter.getText();
 		this.interfazGrafica.textField_dol_converter.setText(texto.substring(0,texto.length()-1));
 	}
-	
+	//SETTER
 	public void settear() {
 		this.interfazGrafica.textField_dol_converter.setText(null);
 		this.interfazGrafica.textField_eur_converter.setText(null);
 	}
-	
+	//VALIDATION
 	public void moneda1() {
 		String cantidad = this.interfazGrafica.textField_dol_converter.getText();
 		if (!cantidad.isEmpty()) {

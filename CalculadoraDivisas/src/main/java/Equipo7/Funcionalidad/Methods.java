@@ -5,7 +5,7 @@ import java.util.Hashtable;
 public class Methods {
 
 	public Methods() {}
-	
+	//INSERT KEY VALUE DICTIONARY WITH COIN AND SYMBOL RELATED 
 	public String typeMonedaSelector(String monedaSeleccionada) {
 		
 		Hashtable<String, String> coinsValue = new Hashtable<String, String>();
@@ -18,9 +18,9 @@ public class Methods {
 		
 	}
 	
-
+    //IF COINS ARE DIFERENT APLIES THE "monedaTransform" ALGORITHM METHOD OTHER CASE IT'S THE SAME COIN :)) (THE FIRST OPTION)
 	public String valorMoneda( double moneda1Value, String moneda1TypeSelected, String moneda2TypeSelected) {
-		// Devuelve el valor de moneda$ + typeMoneda
+
 		if (moneda1TypeSelected.equals(moneda2TypeSelected)) {
 			return moneda1Value + typeMonedaSelector(moneda1TypeSelected.toLowerCase());
 		} else  {
@@ -29,8 +29,8 @@ public class Methods {
 	}
 	
 
+	//THIS METHOD EVALUEs TWO PARAMETERS AND ACCORD CONDITIONS EVALUATED RETURNS THE PROPER EXCHANGE ALGORITHM
 	public String monedaTransform(double moneda1, String moneda1Type,String moneda2Type, String coinIcon) {
-		// Devuelve valor de moneda2
 		
 		String type1 = moneda1Type.toLowerCase();
 		String type2 = moneda2Type.toLowerCase();

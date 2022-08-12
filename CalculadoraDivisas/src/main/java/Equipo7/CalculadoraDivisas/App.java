@@ -8,7 +8,7 @@ public class App
 {
     public static void main( String[] args )
     {
-		// Llamamos a la aplicacion grafica
+		//GRAPHIC APPLICATION INVOCATION
 		InterfazGrafica window = new InterfazGrafica();
 		Methods methods = new Methods();
 		GestorEventos gestorEventos = new GestorEventos(window,methods);
