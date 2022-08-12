@@ -14,8 +14,8 @@ public class InterfazGrafica extends JFrame {
 	private JPanel contentPane;
 	
 	// Inicializamos los valores de las 2 monedas a convertir
-	private int valorMoneda1 = 0;
-	private int valorMoneda2;
+	public int valorMoneda1 = 0;
+	public int valorMoneda2;
 	
 	// Monedas disponibles en nuestra app
 	private String[] monedasDispo = {"Euro", "Dolar", "Yen", "Libra"};
@@ -24,7 +24,7 @@ public class InterfazGrafica extends JFrame {
 	
 	public JLabel moneda1;
 	public JLabel moneda2;
-	public JComboBox comboBox;
+	public JComboBox coinSelector1;
 	
 	public InterfazGrafica() {
 	
@@ -62,10 +62,10 @@ public class InterfazGrafica extends JFrame {
 		moneda2.setBounds(60, 251, 100, 70);
 		contentPane.add(moneda2);
 		
-		comboBox = new JComboBox(this.monedasDispo);
-		comboBox.setSelectedIndex(1);
-		comboBox.setBounds(60, 175, 125, 24);
-		contentPane.add(comboBox);
-		comboBox.setActionCommand("typeMoneda1");
+		coinSelector1 = new JComboBox(this.monedasDispo);
+		coinSelector1.setSelectedIndex(1);
+		coinSelector1.setBounds(60, 175, 125, 24);
+		contentPane.add(coinSelector1);
+		coinSelector1.setActionCommand("typeMoneda1");
 	}
 }

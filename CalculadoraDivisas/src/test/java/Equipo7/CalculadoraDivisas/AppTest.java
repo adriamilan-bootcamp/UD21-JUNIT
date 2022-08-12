@@ -32,7 +32,9 @@ public class AppTest {
 	
 	@Test
 	void moneda1() {
-		String result = methods.valorMoneda("moneda1", 1, , null, null)
+		String result = ig.moneda1.getText();
+		String expected = "1.03$";
+		assertEquals(result, expected);
 	}
 	
 	@Test

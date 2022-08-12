@@ -18,7 +18,7 @@ public class Methods {
 		
 	}
 	
-	public String valorMoneda(String indicator, int moneda1Value, int moneda2Value, String moneda1TypeSelected, String moneda2TypeSelected) {
+	public String valorMoneda(String indicator, int moneda1Value, String moneda1TypeSelected, String moneda2TypeSelected) {
 		// Devuelve el valor de moneda$ + typeMoneda
 		
 		if (indicator.equals("moneda1")) {
