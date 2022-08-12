@@ -31,14 +31,14 @@ public class Methods {
 		
 	}
 	
-	public String monedaTransform(int moneda1, int moneda2, String moneda1Type,String moneda2Type, String coinIcon) {
+	public String monedaTransform(int moneda1, String moneda1Type,String moneda2Type, String coinIcon) {
 		// Devuelve valor de moneda2
 		
 		String moneda1Type = moneda1TypeSelected.toLowerCase();
 		String moneda2Type = moneda2TypeSelected.toLowerCase();
 		
 		if (moneda1Type.equals("euro") && moneda2Type.equals("dolars")) {
-			return euro2Dolars(moneda1, moneda2);
+			return euro2Dolars(moneda1);
 		}
 		
 	}
