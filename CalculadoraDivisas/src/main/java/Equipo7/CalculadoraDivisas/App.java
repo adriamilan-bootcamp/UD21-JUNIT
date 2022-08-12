@@ -12,5 +12,5 @@ public class App
 		InterfazGrafica window = new InterfazGrafica();
 		Methods methods = new Methods();
 		GestorEventos gestorEventos = new GestorEventos(window,methods);
-;    }
+    }
 }

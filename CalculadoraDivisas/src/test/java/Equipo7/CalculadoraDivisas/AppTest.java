@@ -32,7 +32,7 @@ public class AppTest {
 	
 	@Test
 	void moneda1() {
-		String result = ig.moneda1.getText();
+		String result = ig.textField_eur_converter.getText();
 		String expected = "1.03$";
 		assertEquals(result, expected);
 	}

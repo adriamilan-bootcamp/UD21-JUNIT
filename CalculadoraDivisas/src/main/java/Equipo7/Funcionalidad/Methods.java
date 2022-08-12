@@ -20,11 +20,10 @@ public class Methods {
 	
 	public String valorMoneda(String indicator, int moneda1Value, String moneda1TypeSelected, String moneda2TypeSelected) {
 		// Devuelve el valor de moneda$ + typeMoneda
-		
 		if (indicator.equals("moneda1")) {
-			return moneda1Value + typeMonedaSelector(moneda1TypeSelected);
+			return moneda1Value + typeMonedaSelector(moneda1TypeSelected.toLowerCase());
 		} else if(indicator.equals("moneda2")) {
-			return monedaTransform(moneda1Value, moneda1TypeSelected, moneda2TypeSelected, typeMonedaSelector(moneda2TypeSelected));
+			return monedaTransform(moneda1Value, moneda1TypeSelected, moneda2TypeSelected, typeMonedaSelector(moneda2TypeSelected.toLowerCase()));
 		} else {
 			return "Error";
 		}

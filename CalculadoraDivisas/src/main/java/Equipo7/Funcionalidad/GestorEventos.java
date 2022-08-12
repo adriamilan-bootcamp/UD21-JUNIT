@@ -15,6 +15,7 @@ public class GestorEventos implements ActionListener {
 	public GestorEventos(InterfazGrafica ig,Methods metodos) {
 		this.metodos = metodos;
 		this.interfazGrafica = ig;
+		ig.comboBox_1.addActionListener(this);
 		
 	}
 	
@@ -30,17 +31,33 @@ public class GestorEventos implements ActionListener {
 				break;
 		}
 		
+		if (event.getSource() == this.interfazGrafica.btnNewButton_CE) {
+			settear();
+		}else if (event.getSource() == this.interfazGrafica.btnNewButton_delete) {
+			
+		}
+		
+	}
+	
+	public void delete() {
+		String texto = this.interfazGrafica.textField_dol_converter.getText();
+		
+	}
+	
+	public void settear() {
+		this.interfazGrafica.textField_dol_converter.setText(null);
+		this.interfazGrafica.textField_eur_converter.setText(null);
 	}
 	
 	public void moneda1() {
 		
-		this.interfazGrafica.moneda1.setText(this.metodos.valorMoneda("moneda1", this.interfazGrafica.valorMoneda1, this.interfazGrafica.valorMoneda2, this.interfazGrafica.coinSelector1.getSelectedItem().toString(), this.interfazGrafica.coinSelector2.getSelectedItem().toString()));
+		this.interfazGrafica.textField_dol_converter.setText(this.metodos.valorMoneda("moneda1", this.interfazGrafica.valorMoneda1, this.interfazGrafica.comboBox_1.getSelectedItem().toString(), this.interfazGrafica.comboBox_2.getSelectedItem().toString()));
 		
 	}
 
 	public void moneda2() {
 		
-		this.interfazGrafica.moneda2.setText(this.metodos.valorMoneda("moneda1", this.interfazGrafica.valorMoneda1, this.interfazGrafica.valorMoneda2, this.interfazGrafica.coinSelector1.getSelectedItem().toString(), this.interfazGrafica.coinSelector2.getSelectedItem().toString()));
+		this.interfazGrafica.textField_eur_converter.setText(this.metodos.valorMoneda("moneda1", this.interfazGrafica.valorMoneda1, this.interfazGrafica.comboBox_1.getSelectedItem().toString(), this.interfazGrafica.comboBox_2.getSelectedItem().toString()));
 		
 	}
 	
