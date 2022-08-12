@@ -34,13 +34,13 @@ public class GestorEventos implements ActionListener {
 	
 	public void moneda1() {
 		
-		this.interfazGrafica.moneda1.setText(this.metodos.valorMoneda("moneda1", this.interfazGrafica.valorMoneda1, this.interfazGrafica.valorMoneda2, this.interfazGrafica.coinSelector1.getSelectedItem().toString(), this.interfazGrafica.coinSelector2.getSelectedItem().toString()));
+		this.interfazGrafica.moneda1.setText(this.metodos.valorMoneda("moneda1", this.interfazGrafica.valorMoneda1, this.interfazGrafica.coinSelector1.getSelectedItem().toString(), this.interfazGrafica.coinSelector2.getSelectedItem().toString()));
 		
 	}
 
 	public void moneda2() {
 		
-		this.interfazGrafica.moneda2.setText(this.metodos.valorMoneda("moneda1", this.interfazGrafica.valorMoneda1, this.interfazGrafica.valorMoneda2, this.interfazGrafica.coinSelector1.getSelectedItem().toString(), this.interfazGrafica.coinSelector2.getSelectedItem().toString()));
+		this.interfazGrafica.moneda2.setText(this.metodos.valorMoneda("moneda1", this.interfazGrafica.valorMoneda1, this.interfazGrafica.coinSelector1.getSelectedItem().toString(), this.interfazGrafica.coinSelector2.getSelectedItem().toString()));
 		
 	}
 	
