@@ -10,7 +10,7 @@ public class Methods {
 		
 		Hashtable<String, String> coinsValue = new Hashtable<String, String>();
 		coinsValue.put("euro", "€");
-		coinsValue.put("dolar", "$");
+		coinsValue.put("dollar", "$");
 		coinsValue.put("yen", "¥");
 		coinsValue.put("libra", "£");
 		
@@ -18,7 +18,7 @@ public class Methods {
 		
 	}
 	
-	public String valorMoneda(String indicator, int moneda1Value, String moneda1TypeSelected, String moneda2TypeSelected) {
+	public String valorMoneda(String indicator, Double moneda1Value, String moneda1TypeSelected, String moneda2TypeSelected) {
 		// Devuelve el valor de moneda$ + typeMoneda
 		if (indicator.equals("moneda1")) {
 			return moneda1Value + typeMonedaSelector(moneda1TypeSelected.toLowerCase());
@@ -30,7 +30,7 @@ public class Methods {
 		
 	}
 	
-	public String monedaTransform(int moneda1, String moneda1Type,String moneda2Type, String coinIcon) {
+	public String monedaTransform(Double moneda1, String moneda1Type,String moneda2Type, String coinIcon) {
 		// Devuelve valor de moneda2
 		
 		String type1 = moneda1Type.toLowerCase();
