@@ -18,45 +18,42 @@ public class Methods {
 		
 	}
 	
-	public String valorMoneda(String indicator, int moneda1Value, String moneda1TypeSelected, String moneda2TypeSelected) {
+	public String valorMoneda( double moneda1Value, String moneda1TypeSelected, String moneda2TypeSelected) {
 		// Devuelve el valor de moneda$ + typeMoneda
-		if (indicator.equals("moneda1")) {
+		if (moneda1TypeSelected.equals(moneda2TypeSelected)) {
 			return moneda1Value + typeMonedaSelector(moneda1TypeSelected.toLowerCase());
-		} else if(indicator.equals("moneda2")) {
+		} else  {
 			return monedaTransform(moneda1Value, moneda1TypeSelected, moneda2TypeSelected, typeMonedaSelector(moneda2TypeSelected.toLowerCase()));
-		} else {
-			return "Error";
 		}
-		
 	}
 	
-	public String monedaTransform(int moneda1, String moneda1Type,String moneda2Type, String coinIcon) {
+	public String monedaTransform(double moneda1, String moneda1Type,String moneda2Type, String coinIcon) {
 		// Devuelve valor de moneda2
 		
 		String type1 = moneda1Type.toLowerCase();
 		String type2 = moneda2Type.toLowerCase();
 		
-		if (type1.equals("euro") && type2.equals("dolars")) {
+		if (type1.equals("euro") && type2.equals("dolar")) {
 			return moneda1 * 1.03 + coinIcon;
 		} else if(type1.equals("euro") && type2.equals("yen")) {
 			return moneda1 * 136.91 + coinIcon;
 		} else if(type1.equals("euro") && type2.equals("libra")) {
 			return moneda1 * 0.85 + coinIcon;
-		} else if(type1.equals("dollar") && type2.equals("euro")) {
+		} else if(type1.equals("dolar") && type2.equals("euro")) {
 			return moneda1 * 0.98 + coinIcon;
-		} else if(type1.equals("dollar") && type2.equals("yen")) {
+		} else if(type1.equals("dolar") && type2.equals("yen")) {
 			return moneda1 * 133.55 + coinIcon;
-		} else if(type1.equals("dollar") && type2.equals("libra")) {
+		} else if(type1.equals("dolar") && type2.equals("libra")) {
 			return moneda1 * 0.82 + coinIcon;
 		} else if(type1.equals("yen") && type2.equals("euro")) {
 			return moneda1 * 0.0073 + coinIcon;
-		} else if(type1.equals("yen") && type2.equals("dollar")) {
+		} else if(type1.equals("yen") && type2.equals("dolar")) {
 			return moneda1 * 0.0075 + coinIcon;
 		} else if(type1.equals("yen") && type2.equals("libra")) {
 			return moneda1 * 0.0062 + coinIcon;
 		} else if(type1.equals("libra") && type2.equals("euro")) {
 			return moneda1 * 1.18 + coinIcon;
-		} else if(type1.equals("libra") && type2.equals("dollar")) {
+		} else if(type1.equals("libra") && type2.equals("dolar")) {
 			return moneda1 * 1.21 + coinIcon;
 		} else if(type1.equals("libra") && type2.equals("yen")) {
 			return moneda1 * 162.03 + coinIcon;

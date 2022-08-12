@@ -32,18 +32,10 @@ public class AppTest {
 	
 	@Test
 	void moneda1() {
+		ig.textField_eur_converter.setText(this.methods.valorMoneda(1, "euro", "dolar"));
 		String result = ig.textField_eur_converter.getText();
 		String expected = "1.03$";
 		assertEquals(result, expected);
 	}
 	
-	@Test
-	void valorMoneda() {
-		
-	}
-	
-	@Test
-	void monedaTransform() {
-		
-	}
 }

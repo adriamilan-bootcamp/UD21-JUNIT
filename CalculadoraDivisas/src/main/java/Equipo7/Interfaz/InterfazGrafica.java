@@ -84,55 +84,55 @@ public class InterfazGrafica extends JFrame {
 		btnNewButton_8.setBounds(90, 90, 70, 70);
 		panel.add(btnNewButton_8);
 		
-		JButton btnNewButton_7 = new JButton("7");
+		btnNewButton_7 = new JButton("7");
 		btnNewButton_7.setFont(new Font("Tahoma", Font.BOLD, 17));
 		btnNewButton_7.setBounds(10, 90, 70, 70);
 		panel.add(btnNewButton_7);
 		
-		JButton btnNewButton_9 = new JButton("9");
+		btnNewButton_9 = new JButton("9");
 		btnNewButton_9.setFont(new Font("Tahoma", Font.BOLD, 17));
 		btnNewButton_9.setBounds(170, 90, 70, 70);
 		panel.add(btnNewButton_9);
 		
-		JButton btnNewButton_5 = new JButton("5");
+		btnNewButton_5 = new JButton("5");
 		btnNewButton_5.setFont(new Font("Tahoma", Font.BOLD, 17));
 		btnNewButton_5.setBounds(90, 170, 70, 70);
 		panel.add(btnNewButton_5);
 		
-		JButton btnNewButton_4 = new JButton("4");
+		btnNewButton_4 = new JButton("4");
 		btnNewButton_4.setFont(new Font("Tahoma", Font.BOLD, 17));
 		btnNewButton_4.setBounds(10, 170, 70, 70);
 		panel.add(btnNewButton_4);
 		
-		JButton btnNewButton_CE = new JButton("CE");
+		btnNewButton_CE = new JButton("CE");
 		btnNewButton_CE.setBounds(90, 10, 70, 70);
 		panel.add(btnNewButton_CE);
 		
-		JButton btnNewButton_delete = new JButton("delete");
+		btnNewButton_delete = new JButton("delete");
 		btnNewButton_delete.setBounds(170, 10, 70, 70);
 		panel.add(btnNewButton_delete);
 		
-		JButton btnNewButton_0 = new JButton("0");
+		btnNewButton_0 = new JButton("0");
 		btnNewButton_0.setFont(new Font("Tahoma", Font.BOLD, 17));
 		btnNewButton_0.setBounds(90, 331, 70, 70);
 		panel.add(btnNewButton_0);
 		
-		JButton btnNewButton_comma = new JButton(",");
+		btnNewButton_comma = new JButton(",");
 		btnNewButton_comma.setFont(new Font("Tahoma", Font.BOLD, 10));
 		btnNewButton_comma.setBounds(170, 331, 70, 70);
 		panel.add(btnNewButton_comma);
 		
-		JButton btnNewButton_3 = new JButton("3");
+		btnNewButton_3 = new JButton("3");
 		btnNewButton_3.setFont(new Font("Tahoma", Font.BOLD, 17));
 		btnNewButton_3.setBounds(170, 250, 70, 70);
 		panel.add(btnNewButton_3);
 		
-		JButton btnNewButton_2 = new JButton("2");
+		btnNewButton_2 = new JButton("2");
 		btnNewButton_2.setFont(new Font("Tahoma", Font.BOLD, 17));
-		btnNewButton_2.setBounds(90, 250, 70, 70);
+		btnNewButton_2.setBounds(90, 251, 70, 70);
 		panel.add(btnNewButton_2);
 		
-		JButton btnNewButton_1 = new JButton("1");
+		btnNewButton_1 = new JButton("1");
 		btnNewButton_1.setFont(new Font("Tahoma", Font.BOLD, 17));
 		btnNewButton_1.setBounds(10, 250, 70, 70);
 		panel.add(btnNewButton_1);
@@ -156,12 +156,12 @@ public class InterfazGrafica extends JFrame {
 		
 		comboBox_1 = new JComboBox(this.monedasDispo);
 		comboBox_1.setBounds(10, 86, 61, 21);
-		comboBox_1.setActionCommand("moneda1");
+		comboBox_1.setActionCommand("moneda");
 		panel_1.add(comboBox_1);
 		
 		comboBox_2 = new JComboBox(this.monedasDispo);
 		comboBox_2.setBounds(10, 263, 61, 21);
-		comboBox_2.setActionCommand("moneda2");;
+		comboBox_2.setActionCommand("moneda");;
 		panel_1.add(comboBox_2);
 		
 		JLabel lblNewLabel = new JLabel("Updated ");
@@ -179,14 +179,29 @@ public class InterfazGrafica extends JFrame {
 		panel_1.add(lblNewLabel_coin_1_1);
 		
 		textField_dol_converter = new JTextField();
+		textField_dol_converter.setEditable(false);
 		textField_dol_converter.setBounds(10, 134, 143, 19);
 		panel_1.add(textField_dol_converter);
 		textField_dol_converter.setColumns(10);
 		
 		textField_eur_converter = new JTextField();
+		textField_eur_converter.setEditable(false);
 		textField_eur_converter.setColumns(10);
 		textField_eur_converter.setBounds(10, 295, 143, 19);
 		panel_1.add(textField_eur_converter);
+		
+		btnNewButton_0.setActionCommand("numero");
+		btnNewButton_1.setActionCommand("numero");
+		btnNewButton_2.setActionCommand("numero");
+		btnNewButton_3.setActionCommand("numero");
+		btnNewButton_4.setActionCommand("numero");
+		btnNewButton_5.setActionCommand("numero");
+		btnNewButton_6.setActionCommand("numero");
+		btnNewButton_7.setActionCommand("numero");
+		btnNewButton_8.setActionCommand("numero");
+		btnNewButton_9.setActionCommand("numero");
+		btnNewButton_comma.setActionCommand("numero");
+		
 
 	}
 }
