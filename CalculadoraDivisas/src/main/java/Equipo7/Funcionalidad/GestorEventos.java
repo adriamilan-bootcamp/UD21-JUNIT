@@ -12,8 +12,8 @@ public class GestorEventos implements ActionListener {
 	
 	private Methods metodos;
 	
-	public GestorEventos(InterfazGrafica ig) {
-		
+	public GestorEventos(InterfazGrafica ig,Methods metodos) {
+		this.metodos = metodos;
 		this.interfazGrafica = ig;
 		
 	}

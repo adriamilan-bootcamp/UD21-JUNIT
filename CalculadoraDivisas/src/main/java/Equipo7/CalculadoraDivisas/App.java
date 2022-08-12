@@ -11,6 +11,6 @@ public class App
 		// Llamamos a la aplicacion grafica
 		InterfazGrafica window = new InterfazGrafica();
 		Methods methods = new Methods();
-		GestorEventos gestorEventos = new GestorEventos(methods,window);
+		GestorEventos gestorEventos = new GestorEventos(window,methods);
 ;    }
 }
