@@ -10,9 +10,9 @@ public class Methods {
 		
 		Hashtable<String, String> coinsValue = new Hashtable<String, String>();
 		coinsValue.put("euro", "€");
-		coinsValue.put("dolar", "€");
-		coinsValue.put("yen", "€");
-		coinsValue.put("libra", "€");
+		coinsValue.put("dolar", "$");
+		coinsValue.put("yen", "¥");
+		coinsValue.put("libra", "£");
 		
 		return coinsValue.get(monedaSeleccionada);
 		

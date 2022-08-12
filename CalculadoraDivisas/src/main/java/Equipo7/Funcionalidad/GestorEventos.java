@@ -12,9 +12,10 @@ public class GestorEventos implements ActionListener {
 	
 	private Methods metodos;
 	
-	public GestorEventos(InterfazGrafica ig) {
-		
+	public GestorEventos(Methods metodos,InterfazGrafica ig) {
+		this.metodos = metodos;
 		this.interfazGrafica = ig;
+		ig.comboBox.addActionListener(this);
 		
 	}
 	

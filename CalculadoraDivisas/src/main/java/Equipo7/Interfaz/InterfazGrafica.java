@@ -17,9 +17,6 @@ public class InterfazGrafica extends JFrame {
 	private int valorMoneda1 = 0;
 	private int valorMoneda2;
 	
-	// Llamando al gestor de eventos
-	private GestorEventos gestorEventos = new GestorEventos(this);
-	
 	// Monedas disponibles en nuestra app
 	private String[] monedasDispo = {"Euro", "Dolar", "Yen", "Libra"};
 	
@@ -69,7 +66,6 @@ public class InterfazGrafica extends JFrame {
 		comboBox.setSelectedIndex(1);
 		comboBox.setBounds(60, 175, 125, 24);
 		contentPane.add(comboBox);
-		comboBox.addActionListener(gestorEventos);
 		comboBox.setActionCommand("typeMoneda1");
 	}
 }
