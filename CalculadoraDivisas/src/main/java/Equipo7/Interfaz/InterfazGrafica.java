@@ -117,7 +117,7 @@ public class InterfazGrafica extends JFrame {
 		btnNewButton_0.setBounds(90, 331, 70, 70);
 		panel.add(btnNewButton_0);
 		
-		btnNewButton_comma = new JButton(",");
+		btnNewButton_comma = new JButton(".");
 		btnNewButton_comma.setFont(new Font("Tahoma", Font.BOLD, 10));
 		btnNewButton_comma.setBounds(170, 331, 70, 70);
 		panel.add(btnNewButton_comma);

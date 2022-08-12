@@ -20,6 +20,7 @@ public class GestorEventos implements ActionListener {
 		this.metodos = metodos;
 		this.interfazGrafica = ig;
 		ig.comboBox_1.addActionListener(this);
+		ig.comboBox_2.addActionListener(this);
 		ig.btnNewButton_0.addActionListener(this);
 		ig.btnNewButton_1.addActionListener(this);
 		ig.btnNewButton_2.addActionListener(this);
@@ -53,7 +54,8 @@ public class GestorEventos implements ActionListener {
 		if (event.getSource() == this.interfazGrafica.btnNewButton_CE) {
 			settear();
 		}else if (event.getSource() == this.interfazGrafica.btnNewButton_delete) {
-			
+			delete();
+			moneda1();
 		}
 		
 	}
@@ -74,13 +76,15 @@ public class GestorEventos implements ActionListener {
 	}
 	
 	public void moneda1() {
-		
-		try {
+		String cantidad = this.interfazGrafica.textField_dol_converter.getText();
+		if (!cantidad.isEmpty()) {
 			moneda1 = Double.parseDouble(this.interfazGrafica.textField_dol_converter.getText());
 			this.interfazGrafica.textField_eur_converter.setText(this.metodos.valorMoneda(moneda1, this.interfazGrafica.comboBox_1.getSelectedItem().toString(), this.interfazGrafica.comboBox_2.getSelectedItem().toString()));
-		} catch (Exception e) {
-			// TODO: handle exception
+		}else {
+			this.interfazGrafica.textField_eur_converter.setText(null);
 		}
+			
+		
 		
 
 		

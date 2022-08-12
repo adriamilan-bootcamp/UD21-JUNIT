@@ -18,6 +18,7 @@ public class Methods {
 		
 	}
 	
+
 	public String valorMoneda( double moneda1Value, String moneda1TypeSelected, String moneda2TypeSelected) {
 		// Devuelve el valor de moneda$ + typeMoneda
 		if (moneda1TypeSelected.equals(moneda2TypeSelected)) {
@@ -27,6 +28,7 @@ public class Methods {
 		}
 	}
 	
+
 	public String monedaTransform(double moneda1, String moneda1Type,String moneda2Type, String coinIcon) {
 		// Devuelve valor de moneda2
 		
